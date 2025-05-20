@@ -72,7 +72,6 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler
 		return super.handleTypeMismatch(ex, headers, status, request);
 	}
 
-	// Trata erro no corpo da requisição
 	@Override
 	protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex,
 		HttpHeaders headers, HttpStatusCode status, WebRequest request)
