@@ -23,8 +23,7 @@ public class Order
 
 	public BigDecimal calculateTotal()
 	{
-		return this.items.stream()
-			.filter(Objects::nonNull)
+		return this.items.stream().filter(Objects::nonNull)
 			.map(item -> item.getProduct().getPrice().multiply(BigDecimal.valueOf(item.getQuantity())))
 			.reduce(BigDecimal.ZERO, BigDecimal::add);
 	}

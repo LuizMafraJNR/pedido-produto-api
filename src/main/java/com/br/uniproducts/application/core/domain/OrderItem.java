@@ -27,7 +27,8 @@ public class OrderItem
 		}
 		else
 		{
-			throw new IllegalArgumentException("Insufficient stock for product: " + this.product.getName());
+			throw new IllegalArgumentException(
+				"Insufficient stock for product: " + this.product.getName());
 		}
 	}
 
